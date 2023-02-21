@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My Maps</title>
+</head>
+<body>
+  <h1>My Maps</h1>
+  
+  <div id="map-container"></div>
+
+  <script>
+    // Create an array of map filenames
+    const maps = ['EER_02.html'];
+
+    // Loop through the map filenames and create an iframe for each one
+    maps.forEach((map) => {
+      const mapIframe = document.createElement('iframe');
+      mapIframe.src = `3dmaps/${map}`;
+      mapIframe.width = '100%';
+      mapIframe.height = '500px';
+      document.getElementById('map-container').appendChild(mapIframe);
+    });
+  </script>
+</body>
+</html>
